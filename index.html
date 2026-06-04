@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hasbullah Sarijudin — Portfolio</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d0f14;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    background: #151820;
+    border: 1px solid #2a2d3a;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(99,102,241,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 auto 1.25rem;
+    border: 3px solid #2a2d3a;
+    letter-spacing: 1px;
+  }
+
+  .name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #e8eaf0;
+    margin-bottom: 0.3rem;
+  }
+
+  .role {
+    font-size: 13px;
+    color: #7b82a0;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .company {
+    font-size: 13px;
+    color: #4b5068;
+    margin-bottom: 1.5rem;
+  }
+
+  .divider {
+    height: 1px;
+    background: #1e2130;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label {
+    font-size: 11px;
+    color: #4b5068;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.75rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill {
+    background: #1c1f2e;
+    border: 1px solid #2e3148;
+    color: #a5abcc;
+    font-size: 12.5px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .skill.primary {
+    border-color: #4f46e5;
+    color: #a5b4fc;
+    background: #1e1f3a;
+  }
+
+  .fact-box {
+    background: #111420;
+    border: 1px solid #1e2130;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    font-size: 13.5px;
+    color: #8891b4;
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .fact-box::before {
+    content: '\201C';
+    font-size: 32px;
+    color: #4f46e5;
+    font-style: normal;
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    line-height: 1;
+  }
+
+  .fact-text {
+    padding-left: 18px;
+  }
+
+  .links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .btn {
+    background: #1c1f2e;
+    border: 1px solid #2a2d3a;
+    color: #7b82a0;
+    font-size: 13px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: border-color 0.18s, color 0.18s, background 0.18s;
+  }
+
+  .btn:hover {
+    border-color: #4f46e5;
+    color: #a5b4fc;
+    background: #1e1f3a;
+  }
+
+  .btn svg {
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="avatar">HS</div>
+
+  <p class="name">Hasbullah Sarijudin</p>
+  <p class="role">
+    <span class="status-dot"></span>
+    Fullstack Developer
+  </p>
+  <p class="company">Mydata Analytics Sdn Bhd · Kuala Lumpur</p>
+
+  <div class="divider"></div>
+
+  <p class="section-label">Tech Stack</p>
+  <div class="skills">
+    <span class="skill primary">Laravel</span>
+    <span class="skill primary">Alpine.js</span>
+    <span class="skill primary">Docker</span>
+    <span class="skill">Linux</span>
+    <span class="skill">Kubernetes</span>
+    <span class="skill">Git</span>
+    <span class="skill">WSL</span>
+    <span class="skill">DevOps</span>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-text">Chemical engineer turned fullstack dev — bridging the OT/IT gap one commit at a time.</span>
+  </div>
+
+  <div class="links">
+    <a class="btn" href="https://linkedin.com/in/hasbullah-sarijudin" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      LinkedIn
+    </a>
+    <a class="btn" href="mailto:hasbullah.work@gmail.com">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      Email
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
